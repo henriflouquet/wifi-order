@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/wifi-order/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/wifi-order/static/js/main.e274ebba.chunk.js",
+    "main.js.map": "/wifi-order/static/js/main.e274ebba.chunk.js.map",
+    "runtime-main.js": "/wifi-order/static/js/runtime-main.2a4813ac.js",
+    "runtime-main.js.map": "/wifi-order/static/js/runtime-main.2a4813ac.js.map",
+    "static/css/2.e915890e.chunk.css": "/wifi-order/static/css/2.e915890e.chunk.css",
+    "static/js/2.1647738d.chunk.js": "/wifi-order/static/js/2.1647738d.chunk.js",
+    "static/js/2.1647738d.chunk.js.map": "/wifi-order/static/js/2.1647738d.chunk.js.map",
+    "static/js/3.f2d9758d.chunk.js": "/wifi-order/static/js/3.f2d9758d.chunk.js",
+    "static/js/3.f2d9758d.chunk.js.map": "/wifi-order/static/js/3.f2d9758d.chunk.js.map",
+    "index.html": "/wifi-order/index.html",
+    "static/css/2.e915890e.chunk.css.map": "/wifi-order/static/css/2.e915890e.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/wifi-order/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.1647738d.chunk.js.LICENSE.txt": "/wifi-order/static/js/2.1647738d.chunk.js.LICENSE.txt",
+    "static/media/food-carre.4f28ee1f.png": "/wifi-order/static/media/food-carre.4f28ee1f.png",
+    "static/media/food-hori.7808eb22.png": "/wifi-order/static/media/food-hori.7808eb22.png",
+    "static/media/food-tour.073dd0a3.png": "/wifi-order/static/media/food-tour.073dd0a3.png",
+    "static/media/logo-page-1.ba5e6d4a.png": "/wifi-order/static/media/logo-page-1.ba5e6d4a.png",
+    "static/media/poke-carre.6eaba0b8.png": "/wifi-order/static/media/poke-carre.6eaba0b8.png",
+    "static/media/rooftop.901aa8ed.png": "/wifi-order/static/media/rooftop.901aa8ed.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a4813ac.js",
+    "static/css/2.e915890e.chunk.css",
+    "static/js/2.1647738d.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.e274ebba.chunk.js"
+  ]
+}
