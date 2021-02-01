@@ -5,18 +5,18 @@ import { Navigation, Home, About, Contact, ViewItem, Order, LastPage } from "./c
 function App() {
   return (
     <div className="App" style={{backgroundColor: "#F6F6F6"}}>
-      <Router>
+      <BrowserRouter basename="/wifi-order">
         {/* <Navigation /> */}
         <Switch>
-          <Route path="/wifi-order/" component={Home} />
-          <Route path="/wifi-order/about" component={About} />
-          <Route path="/wifi-order/contact" component={Contact} />
-          <Route path="/wifi-order/myorder" component={Order} />
-          <Route path="/wifi-order/lastpage" component={LastPage} />
-          <Route path="/wifi-order/:handle" component={ViewItem} />
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/myorder" component={Order} />
+          <Route path="/lastpage" component={LastPage} />
+          <Route path="/:handle" component={ViewItem} />
         </Switch> 
         
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
