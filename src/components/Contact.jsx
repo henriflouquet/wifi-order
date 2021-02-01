@@ -18,7 +18,7 @@ renderMyOrder = () => {
       quanti = quanti + this.props.order[item].quantity
     })
     return(
-      <Link style={{display: "flex", flexDirection: "column", alignItems: "center", paddingBottom: 20}} class="nav-link" to="/myorder">
+      <Link style={{display: "flex", position: "fixed", bottom: 0, left: 0, right: 0, flexDirection: "column", alignItems: "center", paddingBottom: 20}} class="nav-link" to="/myorder">
         <Button style= {{borderRadius: 50 }} variant="info"><span>{see}</span>{' '}
             <span style={{ color: '#2EA0A6', backgroundColor: "white", paddingTop: 3, paddingBottom: 3, paddingLeft: 7.5, paddingRight: 7.5, borderRadius: 10}}>{quanti}</span>
            </Button>{' '}

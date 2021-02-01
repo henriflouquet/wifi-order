@@ -12,14 +12,22 @@ import sombre from '../assets/cloche-sombre.png'
 import check from '../assets/check.png'
 import logo from '../assets/logo-page-1.png'
 
-class LastPage extends Component {  
+class LastPage extends Component { 
+  
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      bill: ""
+    }
+  }
   
   renderOrder = () => {
     const order = this.props.order
     return Object.keys(order).map((item) => {
         const val = order[item]
         const src= order[item].called ? sombre : clair
-        console.log(order[item].called)
+        
         return (
             <div style={{marginLeft: "10vw", marginRight: "10vw"}} class="row align-items-center my-5">
                <p style={{color: '#2EA0A6', fontWeight: "bold" }}>{item} </p>
@@ -60,11 +68,17 @@ class LastPage extends Component {
         )
     })
 }   
+
+onClick = () => {
+ let text = this.props.language == "en" ? "A waiter will bring you the bill !" : "Un serveur va vous apporter l'addition !"
+ this.setState({bill: text})
+}
   
   
 render() {  
+  console.log(this.state.bill)
   const language = this.props.language
-  const valider = language == "en" ? "Your order has been validated" : "Votre commande a bien été validée"
+  const valider = language == "en" ? "Your order has been validated." : "Votre commande a bien été validée."
   const bill = language == "en" ? "Ask the bill" : "Demander l'addition"
   const bell = language == "en" ? "Activate the bell to request your dish" : "Tapez sur la cloche pour envoyer votre plat"
   const thanks = language == "en" ? "Thank you, and enjoy your meal !" : "Merci et bon appétit !"
@@ -90,14 +104,14 @@ render() {
                         </p>
                         <p style={{textAlign: "center", fontWeight: "bold", color: "#124259"}}>{bell}</p>
                 {this.renderOrder()}
-                <Link style={{marginTop: -40}} class="nav-link" to="/about">
-                    <Button style={{borderRadius: 100}} variant="info">
+                
+                    <Button onClick={() => this.onClick()} style={{borderRadius: 100}} variant="info">
                       <div style={{fontSize: "5vw", paddingLeft: "5vw", paddingRight: "5vw"}}>
                         {bill}
                       </div>
                         
                     </Button>{' '}
-                </Link>
+                    <p>{this.state.bill}</p>
                 <Image 
                       style={{width: "50%", marginTop: "5vw"}}                                 
                       src={logo}                                                
