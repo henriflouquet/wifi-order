@@ -8,12 +8,12 @@ function App() {
       <Router>
         {/* <Navigation /> */}
         <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
-          <Route path="/contact" exact component={() => <Contact />} />
-          <Route path="/myorder" component={Order} />
-          <Route path="/lastpage" component={LastPage} />
-          <Route path="/:handle" component={ViewItem} />
+          <Route path="/wifi-order/" component={Home} />
+          <Route path="/wifi-order/about" component={About} />
+          <Route path="/wifi-order/contact" component={Contact} />
+          <Route path="/wifi-order/myorder" component={Order} />
+          <Route path="/wifi-order/lastpage" component={LastPage} />
+          <Route path="/wifi-order/:handle" component={ViewItem} />
         </Switch> 
         
       </Router>
