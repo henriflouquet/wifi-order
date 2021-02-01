@@ -68,10 +68,10 @@ render() {
                 {this.renderOrder()}
                 <div style={{display: "flex", justifyContent: "center", flexDirection: "row"}}>
                     <Link class="nav-link" to="/contact">
-                            <Button variant="info">Return</Button>{' '}
+                            <Button style={{borderRadius: 20}} variant="info">Return</Button>{' '}
                         </Link>
                         <Link class="nav-link" to="/lastpage">
-                            <Button variant="info">Validate</Button>{' '}
+                            <Button style={{borderRadius: 20}} variant="info">Validate</Button>{' '}
                         </Link>
                 </div>
                     
