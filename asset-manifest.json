@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wifi-order/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/wifi-order/static/js/main.a0c7a4d6.chunk.js",
-    "main.js.map": "/wifi-order/static/js/main.a0c7a4d6.chunk.js.map",
+    "main.js": "/wifi-order/static/js/main.1b89c4c6.chunk.js",
+    "main.js.map": "/wifi-order/static/js/main.1b89c4c6.chunk.js.map",
     "runtime-main.js": "/wifi-order/static/js/runtime-main.2a4813ac.js",
     "runtime-main.js.map": "/wifi-order/static/js/runtime-main.2a4813ac.js.map",
     "static/css/2.e915890e.chunk.css": "/wifi-order/static/css/2.e915890e.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.e915890e.chunk.css",
     "static/js/2.1647738d.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.a0c7a4d6.chunk.js"
+    "static/js/main.1b89c4c6.chunk.js"
   ]
 }
