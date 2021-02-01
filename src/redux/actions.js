@@ -23,3 +23,9 @@ export function callItem(item){
     dispatch({ type: 'CALL_ITEM', payload: item});
   }
 } 
+
+export function changeLanguage(value){    
+  return function(dispatch){  
+    dispatch({ type: 'CHANGE_LANGUAGE', payload: value.value});
+  }
+} 

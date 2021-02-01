@@ -23,11 +23,15 @@ class ViewItem extends Component {
   
 render() {
     let options = []
-    
+    const riz = this.props.language == "en" ? "Add rice" : "Ajouter riz"
+    const sauce = this.props.language == "en" ? "Add sauce" : "Ajouter sauce"
+    const order = this.props.language == "en" ? "Add to order" : "Ajouter à la commande"
+
     for (let i = 1; i <= 10; i++) {
         options.push({label: i, value: i});
     }
     const item = this.props.match.params.handle
+    
     return (
       <div className="viewitem">
         
@@ -53,10 +57,10 @@ render() {
            <Form>  
             <div key={`custom-radio`} className="mb-3">
             <input type="radio" checked={this.state.one} 
-                onClick={() => this.setState({one: !this.state.one})} value="male" /> Add rice
+                onClick={() => this.setState({one: !this.state.one})} value="male" /> {riz}
                 <br></br>
                 <input type="radio" checked={this.state.two} 
-                onClick={() => this.setState({two: !this.state.two})} value="male" /> Add sauce      
+                onClick={() => this.setState({two: !this.state.two})} value="male" /> {sauce}      
             </div>          
         </Form>
         <div style={{width: "80%"}}>
@@ -67,7 +71,7 @@ render() {
           <Link class="nav-link" to="/contact">
           <Button onClick={() => this.props.dispatch(addToOrder(item, this.state.quantity))} style={{borderRadius: 50}} variant="info">
                       <div style={{fontSize: "4vw", paddingLeft: "4vw", paddingRight: "4vw"}}>
-                        Add to order
+                        {order}
                       </div>
                         
                     </Button>{' '}
@@ -86,7 +90,8 @@ render() {
 function mapStateToProps(state) {
   return {
     text: state.text,
-    order: state.order
+    order: state.order,
+    language: state.language
   }
 }
 

@@ -10,12 +10,17 @@ import 'react-tabs/style/react-tabs.css';
 import food from '../assets/poke-carre.png'
 import food2 from '../assets/food-tour.png'
 import food3 from '../assets/food-carre.png'
-const carteText = "Specialty english"
-const lunchText = "Tartare english"
-const desertText = "Tiramisu"
+import { connect } from 'react-redux'
 
-export default () => (
-    <Tabs>
+class MenuTab extends Component { 
+
+  render() {
+    const language = this.props.language
+    const carteText =  language == "en" ? "Specialty english" : "Spécialité francaise"
+    const lunchText = language == "en" ? "Tartare english" : "Tartare français"
+    const desertText = "Tiramisu"
+    return (
+      <Tabs>
       <TabList style={{paddingLeft: "6vw"}}>
         <Tab>A la carte</Tab>
         <Tab>Lunch</Tab>
@@ -116,5 +121,19 @@ export default () => (
         </p> 
       </TabPanel>
     </Tabs>
+    )
+  }
+}
+
+  function mapStateToProps(state) {
+    return {
+      text: state.text,
+      order: state.order,
+      language: state.language
+    }
+  }
+  
+  export default connect(mapStateToProps)(MenuTab);
     
-  );
+    
+ 

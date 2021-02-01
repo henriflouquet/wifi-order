@@ -1,6 +1,7 @@
 const reducers = (state = {
   text: "hiiii",
-  order: {}
+  order: {},
+  language: "en"
 }, action) => {
 
   switch (action.type) {
@@ -35,6 +36,10 @@ const reducers = (state = {
       let newOrder = {...state.order}      
       newOrder[action.payload].called = true
       return { ...state, order: newOrder}
+    } 
+    case 'CHANGE_LANGUAGE': {
+      
+      return { ...state, language: action.payload}
     } 
   }
 

@@ -9,7 +9,8 @@ import food from '../assets/food-hori.png'
 class Contact extends Component { 
   
 renderMyOrder = () => {
- 
+  const language = this.props.language
+  const see =  language == "en" ? "See my order" : "Voir ma commande"
   if (this.props.order) {
     // const reducer = (accumulator, currentValue) => accumulator + currentValue
     let quanti = 0
@@ -18,7 +19,7 @@ renderMyOrder = () => {
     })
     return(
       <Link style={{display: "flex", flexDirection: "column", alignItems: "center", paddingBottom: 20}} class="nav-link" to="/myorder">
-        <Button style= {{borderRadius: 50 }} variant="info"><span>See my order</span>{' '}
+        <Button style= {{borderRadius: 50 }} variant="info"><span>{see}</span>{' '}
             <span style={{ color: '#2EA0A6', backgroundColor: "white", paddingTop: 3, paddingBottom: 3, paddingLeft: 7.5, paddingRight: 7.5, borderRadius: 10}}>{quanti}</span>
            </Button>{' '}
         
@@ -55,7 +56,8 @@ render() {
 function mapStateToProps(state) {
   return {
     text: state.text,
-    order: state.order
+    order: state.order,
+    language: state.language
   }
 }
 

@@ -50,7 +50,12 @@ class Order extends Component {
      })
  }   
   
-render() {   
+render() { 
+    const language = this.props.language  
+    const order = language == "en" ? "Your order" : "Votre commande"
+    const retour = language == "en" ? "Return" : "Retour"
+    const validate = language == "en" ? "Validate" : "Valider"
+
     return (
       <div className="viewitem">
         
@@ -62,16 +67,16 @@ render() {
           />
             <div >
                 <div style={{display: "flex", textDecoration: "underline", textDecorationColor: "#2EA0A6", flex: 1}}>
-                    <h1 style={{textAlign: "center", color: '#2EA0A6', fontWeight: "bold", paddingLeft:"10vw"}}> Your order</h1>
+                    <h1 style={{textAlign: "center", color: '#2EA0A6', fontWeight: "bold", paddingLeft:"10vw"}}> {order}</h1>
 
                 </div>
                 {this.renderOrder()}
                 <div style={{display: "flex", justifyContent: "center", flexDirection: "row"}}>
                     <Link class="nav-link" to="/contact">
-                            <Button style={{borderRadius: 20}} variant="info">Return</Button>{' '}
+                            <Button style={{borderRadius: 20}} variant="info">{retour}</Button>{' '}
                         </Link>
                         <Link class="nav-link" to="/lastpage">
-                            <Button style={{borderRadius: 20}} variant="info">Validate</Button>{' '}
+                            <Button style={{borderRadius: 20}} variant="info">{validate}</Button>{' '}
                         </Link>
                 </div>
                     
@@ -86,7 +91,8 @@ render() {
 
 function mapStateToProps(state) {
   return {    
-    order: state.order
+    order: state.order,
+    language: state.language
   }
 }
 

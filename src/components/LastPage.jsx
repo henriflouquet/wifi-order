@@ -62,7 +62,12 @@ class LastPage extends Component {
 }   
   
   
-render() {   
+render() {  
+  const language = this.props.language
+  const valider = language == "en" ? "Your order has been validated" : "Votre commande a bien été validée"
+  const bill = language == "en" ? "Ask the bill" : "Demander l'addition"
+  const bell = language == "en" ? "Activate the bell to request your dish" : "Tapez sur la cloche pour envoyer votre plat"
+  const thanks = language == "en" ? "Thank you, and enjoy your meal !" : "Merci et bon appétit !"
     return (
       <div className="viewitem">
         
@@ -73,7 +78,7 @@ render() {
             alt=""
           />
               
-                <p style={{textAlign: "center", color: "#124259"}}>Your order has been validated
+                <p style={{textAlign: "center", color: "#124259"}}>{valider}
                 <hr
                             style={{
                                 width: "90vw",
@@ -83,12 +88,12 @@ render() {
                             }}
                         />
                         </p>
-                        <p style={{textAlign: "center", fontWeight: "bold", color: "#124259"}}>Activate the bell to request your dish</p>
+                        <p style={{textAlign: "center", fontWeight: "bold", color: "#124259"}}>{bell}</p>
                 {this.renderOrder()}
                 <Link style={{marginTop: -40}} class="nav-link" to="/about">
                     <Button style={{borderRadius: 100}} variant="info">
                       <div style={{fontSize: "5vw", paddingLeft: "5vw", paddingRight: "5vw"}}>
-                        Ask the bill
+                        {bill}
                       </div>
                         
                     </Button>{' '}
@@ -98,7 +103,7 @@ render() {
                       src={logo}                                                
                       alt=""
                     /> 
-                    <p style={{textAlign: "center", fontWeight: "bold", color: "#124259"}}>Thank you, and enjoy your meal !</p>
+                    <p style={{textAlign: "center", fontWeight: "bold", color: "#124259"}}>{thanks}</p>
           </div>
         </div>
       
@@ -108,7 +113,8 @@ render() {
 
 function mapStateToProps(state) {
   return {    
-    order: state.order
+    order: state.order,
+    language: state.language
   }
 }
 
