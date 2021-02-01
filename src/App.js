@@ -9,8 +9,8 @@ function App() {
         {/* <Navigation /> */}
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/about" exact component={() => <About />} />
+          <Route path="/contact" exact component={() => <Contact />} />
           <Route path="/myorder" component={Order} />
           <Route path="/lastpage" component={LastPage} />
           <Route path="/:handle" component={ViewItem} />
@@ -22,3 +22,5 @@ function App() {
 }
 
 export default App;
+
+{/* <Route path="/contact" exact component={() => <Contact />} /> */}
