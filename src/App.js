@@ -5,7 +5,7 @@ import { Navigation, Home, About, Contact, ViewItem, Order, LastPage } from "./c
 function App() {
   return (
     <div className="App" style={{backgroundColor: "#F6F6F6"}}>
-      <BrowserRouter basename="/wifi-order">
+      <Router basename="/wifi-order">
         {/* <Navigation /> */}
         <Switch>
           <Route path="/" component={Home} />
@@ -16,7 +16,7 @@ function App() {
           <Route path="/:handle" component={ViewItem} />
         </Switch> 
         
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
